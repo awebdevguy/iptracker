@@ -18,7 +18,7 @@ body {
   justify-items: center;
   font-family: Rubik, sans-serif;
   background-image: url(images/pattern-bg.png);
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: contain;
   position: fixed;
   top: 0;
