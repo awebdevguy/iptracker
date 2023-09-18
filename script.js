@@ -18,6 +18,7 @@ let mymap;
 let marker;
 const zoomSize = 15;
 // const mapKey = MAPBOX_KEY; // If using Mapbox, not needed for OSM
+const CORSProxy = 'https://corsproxy.io/?'
 
 // Load
 locateIP();
@@ -27,8 +28,7 @@ function locateIP() {
 	let ipAddress = input.value;
 	const xhr = new XMLHttpRequest(),
 		method = "GET",
-		url = `https://ip-api.com/json/${ipAddress}?fields=33580031`;
-
+		url = CORSProxy + encodeURIComponent(`http://ip-api.com/json/${ipAddress}?fields=33580031`);
 	xhr.open(method, url, true);
 	xhr.onreadystatechange = function () {
 		// In local files, status is 0 upon success in Mozilla Firefox
