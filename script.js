@@ -27,7 +27,7 @@ function locateIP() {
 	let ipAddress = input.value;
 	const xhr = new XMLHttpRequest(),
 		method = "GET",
-		url = `http://ip-api.com/json/${ipAddress}?fields=33580031`;
+		url = `https://ip-api.com/json/${ipAddress}?fields=33580031`;
 
 	xhr.open(method, url, true);
 	xhr.onreadystatechange = function () {
